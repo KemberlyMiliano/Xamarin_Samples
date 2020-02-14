@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<TabbedPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="AppXample.MainPage"
+             xmlns:local="clr-namespace:AppXample"
+            BarBackgroundColor="White"
+            BarTextColor="Gray">
+
+    <TabbedPage.Children>
+        <NavigationPage Title="Home" IconImageSource="home" BarTextColor="Black" BarBackgroundColor="White">
+            <x:Arguments>
+                <local:HomePage />
+            </x:Arguments>
+        </NavigationPage>
+
+        <NavigationPage Title="Discovery" IconImageSource="discovery" BarTextColor="Black" BarBackgroundColor="White">
+            <x:Arguments>
+                <local:DiscoveryPage />
+            </x:Arguments>
+        </NavigationPage>
+
+        <NavigationPage Title="Bookmark" IconImageSource="bookmarkIcon" BarTextColor="Black"  BarBackgroundColor="White">
+            <x:Arguments>
+                <local:BookmarkPage />
+            </x:Arguments>
+        </NavigationPage>
+
+        <NavigationPage Title="Top Foodie" IconImageSource="trofyIcon" BarTextColor="Black" BarBackgroundColor="White">
+            <x:Arguments>
+                <local:TopFoodiePage />
+            </x:Arguments>
+        </NavigationPage>
+
+        <NavigationPage Title="Profile" IconImageSource="profileIcon" BarTextColor="Black" BarBackgroundColor="White">
+            <x:Arguments>
+                <local:ProfilePage />
+            </x:Arguments>
+        </NavigationPage>
+    </TabbedPage.Children>
+</TabbedPage>
