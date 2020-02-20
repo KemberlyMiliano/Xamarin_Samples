@@ -21,40 +21,62 @@
                 </Grid.ColumnDefinitions>
 
                 <local:DiscoveryButtonView 
-                     x:Name="beerStack" Grid.Row="0" Grid.Column="0" IconImageSource="beerIcon" Label1_Text="Bar and Hotels" Label2_Text="42 Place" BackgroundColor="White">
+                    Grid.Row="0" 
+                    Grid.Column="0" 
+                    BindingContext="{Binding MenuOptionBeer}"
+                    BackgroundColor="{Binding MenuOptionBeer.BackgroundColor}">
                     <local:DiscoveryButtonView.GestureRecognizers>
                         <TapGestureRecognizer Tapped="Stack_Clicked"/>
                     </local:DiscoveryButtonView.GestureRecognizers>
                 </local:DiscoveryButtonView>
 
                 <local:DiscoveryButtonView 
-                     x:Name="diningStack" Grid.Row="0" Grid.Column="1" IconImageSource="fineDiningIcon" Label1_Text="Fine Dining" Label2_Text="15 Place" BackgroundColor="White">
+                    Grid.Row="0" 
+                    Grid.Column="1" 
+                     BindingContext="{Binding MenuOptionDining}"
+                    BackgroundColor="{Binding MenuOptionDining.BackgroundColor}">
                     <local:DiscoveryButtonView.GestureRecognizers>
-                        <TapGestureRecognizer Tapped="Stack_Clicked1"/>
+                        <TapGestureRecognizer Tapped="Stack_Clicked"/>
                     </local:DiscoveryButtonView.GestureRecognizers>
                 </local:DiscoveryButtonView>
+
                 <local:DiscoveryButtonView 
-                     x:Name="cafeStack" Grid.Row="1" Grid.Column="0" IconImageSource="cafesIcon" Label1_Text="Cafes" Label2_Text="28 Place" BackgroundColor="White">
+                    Grid.Row="1" 
+                    Grid.Column="0" 
+                     BindingContext="{Binding MenuOptionCafe}"
+                    BackgroundColor="{Binding MenuOptionCafe.BackgroundColor}">
                     <local:DiscoveryButtonView.GestureRecognizers>
-                        <TapGestureRecognizer Tapped="Stack_Clicked2"/>
+                        <TapGestureRecognizer Tapped="Stack_Clicked"/>
                     </local:DiscoveryButtonView.GestureRecognizers>
                 </local:DiscoveryButtonView>
+
                 <local:DiscoveryButtonView 
-                      x:Name="nearbyStack" Grid.Row="1" Grid.Column="1" IconImageSource="nearbyIcon" Label1_Text="Nearby" Label2_Text="34 Place" BackgroundColor="White">
+                    Grid.Row="1" 
+                    Grid.Column="1" 
+                    BackgroundColor="{Binding MenuOptionNearby.BackgroundColor}" 
+                    BindingContext="{Binding MenuOptionNearby}">
                     <local:DiscoveryButtonView.GestureRecognizers>
-                        <TapGestureRecognizer Tapped="Stack_Clicked3"/>
+                        <TapGestureRecognizer Tapped="Stack_Clicked"/>
                     </local:DiscoveryButtonView.GestureRecognizers>
                 </local:DiscoveryButtonView>
+
                 <local:DiscoveryButtonView 
-                      x:Name="foodStack" Grid.Row="2" Grid.Column="0" IconImageSource="fastFoodIcon" Label1_Text="Fast Foods" Label2_Text="29 Place" BackgroundColor="White">
+                    Grid.Row="2" 
+                    Grid.Column="0" 
+                    BackgroundColor="{Binding MenuOptionFastFood.BackgroundColor}" 
+                    BindingContext="{Binding MenuOptionFastFood}">
                     <local:DiscoveryButtonView.GestureRecognizers>
-                        <TapGestureRecognizer Tapped="Stack_Clicked4"/>
+                        <TapGestureRecognizer Tapped="Stack_Clicked"/>
                     </local:DiscoveryButtonView.GestureRecognizers>
                 </local:DiscoveryButtonView>
+
                 <local:DiscoveryButtonView 
-                      x:Name="pizzaStack" Grid.Row="2" Grid.Column="1" IconImageSource="izzaIcon"  Label1_Text="Featured Foods" Label2_Text="21 Place" BackgroundColor="White">
+                    Grid.Row="2" 
+                    Grid.Column="1" 
+                    BackgroundColor="{Binding MenuOptionFeaturedFood.BackgroundColor}" 
+                    BindingContext="{Binding MenuOptionFeaturedFood}">
                     <local:DiscoveryButtonView.GestureRecognizers>
-                        <TapGestureRecognizer Tapped="Stack_Clicked5"/>
+                        <TapGestureRecognizer Tapped="Stack_Clicked"/>
                     </local:DiscoveryButtonView.GestureRecognizers>
                 </local:DiscoveryButtonView>
 

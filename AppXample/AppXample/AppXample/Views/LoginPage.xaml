@@ -18,6 +18,7 @@
                     <RowDefinition Height="Auto" />
                     <RowDefinition Height="Auto" />
                     <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
                 </Grid.RowDefinitions>
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="*" />
@@ -29,16 +30,17 @@
                 <Label Text="Login" Style="{StaticResource firstLabel}"/>
                 <Label Text="Sign Up" Style="{StaticResource secondLabel}">
                     <Label.GestureRecognizers>
-                        <TapGestureRecognizer Tapped="SignUp_Clicked"/>
+                        <TapGestureRecognizer Command="{Binding SignUpCommand}"/>
                     </Label.GestureRecognizers>
                 </Label>
                 <ImageButton Source="personIcon" Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="4" BackgroundColor="Transparent" HeightRequest="100" Margin="30"/>
-                <Entry x:Name="username" Placeholder="Username or email address" Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="4" HorizontalOptions="FillAndExpand"/>
-                <Entry x:Name="password"  Placeholder="Password" Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="4" IsPassword="True" HorizontalOptions="FillAndExpand"/>
-                <ImageButton Source="eyeIcon" HorizontalOptions="End" HeightRequest="25" x:Name="imageShowPassword" Grid.Column="3" Grid.Row="3" Clicked="OnChangePasswordVisibility" BackgroundColor="Transparent"/>
+                <Entry Placeholder="Username or email address" Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="4" HorizontalOptions="FillAndExpand" Text="{Binding User.Username}"/>
+                <Entry Placeholder="Password" Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="4" IsPassword="{Binding IsPassword}" HorizontalOptions="FillAndExpand" Text="{Binding User.Password}"/>
+                <ImageButton Source="{Binding ImageSource}" HorizontalOptions="End" HeightRequest="25" Grid.Column="3" Grid.Row="3" BackgroundColor="Transparent" Command="{Binding PasswordVisibilityCommand}"/>
                 <ImageButton Source="translateIcon" Grid.Row="4" Grid.Column="3" HeightRequest="30" HorizontalOptions="EndAndExpand" BackgroundColor="Transparent"/>
-                <Button Text="✔     Log in" Grid.Row="5" Grid.Column ="0" Style="{StaticResource buttonStyle}" Clicked="Login_Clicked" Margin="0,60,0,0"/>
-                <Label Text="Login with" Grid.Row="6" Grid.Column="0" Grid.ColumnSpan="4" HorizontalOptions="Center" VerticalOptions="CenterAndExpand"  Margin="0,60,0,10"/>
+                <Button Text="✔     Log in" Grid.Row="5" Grid.Column ="0" Style="{StaticResource buttonStyle}" Margin="0,30,0,10" Command="{Binding LoginCommand}"/>
+                <Label Text="{Binding DisplayErrorMessage}" Grid.Row="6" Grid.Column="0" Grid.ColumnSpan="4" HorizontalOptions="CenterAndExpand" TextColor="Red"/>
+                <Label Text="Login with" Grid.Row="7" Grid.Column="0" Grid.ColumnSpan="4" HorizontalOptions="Center" VerticalOptions="CenterAndExpand"  Margin="0,65,0,10"/>
                 <ImageButton Source="google" Grid.Column="0" Style="{StaticResource loginImage}"/>
                 <ImageButton Source="github" Grid.Column="1" Style="{StaticResource loginImage}"/>
                 <ImageButton Source="twitter"  Grid.Column="2" Style="{StaticResource loginImage}"/>

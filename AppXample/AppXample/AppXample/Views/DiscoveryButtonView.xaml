@@ -8,19 +8,19 @@
              x:Name ="discoveryButtonView">
     <ContentView.Content>
 
-        <StackLayout Margin ="8" BindingContext="{x:Reference discoveryButtonView}">
+        <StackLayout Margin ="8">
 
-            <Image Source="{Binding IconImageSource}"  HeightRequest="80" Margin="0,10,0,0"/>
+            <Image Source="{Binding ImageSource}"  HeightRequest="80" Margin="0,10,0,0" />
 
             <Label FontSize="18"
                 FontAttributes="Bold"
                 TextColor="Black"
                 HorizontalOptions="CenterAndExpand"
-                Text="{Binding Label1_Text}"/>
+                Text="{Binding Title}"/>
 
             <Label FontSize="13"
                 HorizontalOptions="Center"
-                Text="{Binding Label2_Text}"/>
+                Text="{Binding Subtitle}"/>
 
         </StackLayout>
 

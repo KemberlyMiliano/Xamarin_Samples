@@ -41,7 +41,7 @@
                 <Setter Property="HeightRequest" Value="50"/>
                 <Setter Property="HorizontalOptions" Value="FillAndExpand"/>
                 <Setter Property="VerticalOptions" Value="EndAndExpand"/>
-                <Setter Property="Grid.Row" Value="7"/>
+                <Setter Property="Grid.Row" Value="8"/>
                 <Setter Property="BackgroundColor" Value="Transparent"/>
             </Style>
 

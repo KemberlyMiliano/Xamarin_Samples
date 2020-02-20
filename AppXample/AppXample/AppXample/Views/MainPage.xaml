@@ -10,31 +10,31 @@
             BarTextColor="Gray">
 
     <TabbedPage.Children>
-        <NavigationPage Title="Home" IconImageSource="home" BarTextColor="Black" BarBackgroundColor="White">
+        <NavigationPage Title="Home" IconImageSource="home" BarTextColor="Black" BarBackgroundColor="White" HeightRequest="70">
             <x:Arguments>
                 <local:HomePage />
             </x:Arguments>
         </NavigationPage>
 
-        <NavigationPage Title="Discovery" IconImageSource="discovery" BarTextColor="Black" BarBackgroundColor="White">
+        <NavigationPage Title="Discovery" IconImageSource="discovery" BarTextColor="Black" BarBackgroundColor="White" HeightRequest="70">
             <x:Arguments>
                 <local:DiscoveryPage />
             </x:Arguments>
         </NavigationPage>
 
-        <NavigationPage Title="Bookmark" IconImageSource="bookmarkIcon" BarTextColor="Black"  BarBackgroundColor="White">
+        <NavigationPage Title="Bookmark" IconImageSource="bookmarkIcon" BarTextColor="Black"  BarBackgroundColor="White" HeightRequest="70">
             <x:Arguments>
                 <local:BookmarkPage />
             </x:Arguments>
         </NavigationPage>
 
-        <NavigationPage Title="Top Foodie" IconImageSource="trofyIcon" BarTextColor="Black" BarBackgroundColor="White">
+        <NavigationPage Title="Top Foodie" IconImageSource="trofyIcon" BarTextColor="Black" BarBackgroundColor="White" HeightRequest="70">
             <x:Arguments>
                 <local:TopFoodiePage />
             </x:Arguments>
         </NavigationPage>
 
-        <NavigationPage Title="Profile" IconImageSource="profileIcon" BarTextColor="Black" BarBackgroundColor="White">
+        <NavigationPage Title="Profile" IconImageSource="profileIcon" BarTextColor="Black" BarBackgroundColor="White" HeightRequest="70">
             <x:Arguments>
                 <local:ProfilePage />
             </x:Arguments>

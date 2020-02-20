@@ -28,22 +28,17 @@
                 <Label Text="Sign Up" Style="{StaticResource firstLabel}"/>
                 <Label Text="Login" Style="{StaticResource secondLabel}">
                     <Label.GestureRecognizers>
-                        <TapGestureRecognizer Tapped="Login_Clicked"/>
+                        <TapGestureRecognizer Command="{Binding LoginCommand}"/>
                     </Label.GestureRecognizers>
                 </Label>
                 <ImageButton Source="cameraIcon" Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="4" BackgroundColor="Transparent" HeightRequest="100" Margin="40"/>
-                <Entry x:Name="email" Placeholder="Email address" Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="4"/>
-                <Entry x:Name="username" Placeholder="Username" Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="4"/>
-                <Entry x:Name="password" Placeholder="Password" Grid.Row="4" Grid.Column="0" Grid.ColumnSpan="4"/>
-                <Entry  x:Name="passwordCheck" Placeholder="Repeat Password" Grid.Row="5" Grid.Column="0" Grid.ColumnSpan="4"/>
-                <Button Text="✔     Sign Up" Style="{StaticResource buttonStyle}" Grid.Row="6" Grid.Column ="0" Clicked="SignUp_Clicked" Margin="0,50,0,50"/>
-                <Label Text="Terms of Service" Grid.Row="7" Grid.Column="0" Grid.ColumnSpan="4" HorizontalOptions="Center" VerticalOptions="EndAndExpand">
-                    <Label.GestureRecognizers>
-                        <TapGestureRecognizer Tapped="Terms_Clicked"/>
-                    </Label.GestureRecognizers>
-                </Label>
+                <Entry Placeholder="Email address" Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="4" Text="{Binding User.Email}"/>
+                <Entry Placeholder="Username" Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="4" Text="{Binding User.Username}"/>
+                <Entry Placeholder="Password" Grid.Row="4" Grid.Column="0" Grid.ColumnSpan="4" Text="{Binding User.Password}"/>
+                <Entry Placeholder="Repeat Password" Grid.Row="5" Grid.Column="0" Grid.ColumnSpan="4" Text="{Binding User.RepeatPassword}"/>
+                <Button Text="✔     Sign Up" Style="{StaticResource buttonStyle}" Grid.Row="6" Grid.Column ="0" Margin="0,50,0,50" Command="{Binding SignUpCommand}"/>
+                <Label Text="Terms of Service" Grid.Row="7" Grid.Column="0" Grid.ColumnSpan="4" HorizontalOptions="Center" VerticalOptions="EndAndExpand"/>
             </Grid>
         </ScrollView>
-
     </ContentPage.Content>
 </ContentPage>
