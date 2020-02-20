@@ -8,7 +8,7 @@ This project contains Xamarin Autentication Pages and a Xamarin Tabbed Page exam
 ## Xamarin Forms:
 
 ### Autentication Pages
-In this sample app we show a simple Login and Sig Up page
+In this sample app we show a simple Login and Sign Up Page
 
 <table>
 <tr>
